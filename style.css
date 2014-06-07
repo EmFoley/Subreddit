@@ -1,0 +1,65 @@
+body {
+  background-image: url('http://th03.deviantart.net/fs71/PRE/i/2010/349/e/6/reddit_jeans_wallpaper_pack_by_aenaon-d34ya46.jpg');
+  position: center;
+  background-attachment: scroll;
+}
+
+.container {
+  width: 95%;
+  height: 40em;
+  margin: 0 auto;
+  border: 0.3em solid #C8C9CC;
+  border-radius: 0.2em;
+  position: relative;
+  display: block;
+}
+
+.container:after {
+  background-image: url("http://www.w8themes.com/wp-content/uploads/2013/08/Reddit-Wallpaper.jpg");
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  content: "";
+}
+
+.container h1 {
+  color: #FFFFFF;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 700;
+  margin-left: 1.5em;
+}
+
+.posts {
+  margin-top: 1em;
+  margin-left: 5em;
+}
+
+.button {
+  width: 20em;
+  height: 4em;
+  border-radius: 1em;
+  background-color: #990000;
+  background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAADklEQVQIW2NgQAXGZHAAGioAza6+Hk0AAAAASUVORK5CYII="); 
+  border: 0.1em solid #800000;
+  text-align: center;
+}
+
+.button a {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-family: 'Josefin Slab', serif;
+  font-size: 2em;
+  line-height: 2em;
+  display: block;
+}
+
+
+
+
+
+
+
