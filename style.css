@@ -61,10 +61,37 @@ body {
   margin-left: 5em;
 }
 
+.indv-post {
+  width: 80%;
+  background-color: #C8C9CC;
+  background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAADklEQVQIW2NgQAXGZHAAGioAza6+Hk0AAAAASUVORK5CYII="); 
+  border: 0.5em solid #C8C9CC;
+  border-radius: 0.15em;
+  margin: 0.2em;
+}
+
 .indv-post ul {
   list-style: none;
 }
 
+.vote {
+  position: relative;
+  bottom: 1.5em;
+}
+
+#up {
+  float: right;
+  display: inline-block;
+}
+
+#down {
+  float: left;
+  display: inline-block;
+}
+
+#countup #countdown {
+  display: inline-table;
+}
 
 
 
