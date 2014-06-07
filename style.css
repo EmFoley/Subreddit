@@ -74,25 +74,33 @@ body {
   list-style: none;
 }
 
-.vote {
+.vote-up-div .vote-down-div {
   position: relative;
   bottom: 1.5em;
 }
 
-#up {
+.vote-up-div {
+  display: block;
   float: right;
-  display: inline-block;
 }
 
-#down {
+.vote-down-div {
+  display: block;
   float: left;
-  display: inline-block;
 }
 
-#countup #countdown {
-  display: inline-table;
+#countup {
+  display: block;
+  float: right;
+  position: relative;
+  bottom: 1em;
 }
 
+#countdown {
+  float: left;
+  position: relative;
+  bottom: 1em;
+}
 
 
 
