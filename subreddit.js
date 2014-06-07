@@ -10,10 +10,13 @@ $('#view').click(function(){
                 '<div class="counter" id="countdown">' + '</div>' +
                 '</div>');
 
-                  $('#up').click(function(){
-                    $('#countup').html(function(i, val) { return val*1+1;
-                    });
-                  });
+              $("#up").click(function() {
+                  $('#countup').html(function(i, val) { return +val+1 });
+              });
+              $("#down").click(function() {
+                  $('#countdown').html(function(i, val) { return +val+1 });
+              });
+                  
             });
           });
         });

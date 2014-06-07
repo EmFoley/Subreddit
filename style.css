@@ -80,19 +80,27 @@ body {
 }
 
 #up {
+  display: block;
   float: right;
-  display: inline-block;
 }
 
 #down {
+  display: block;
   float: left;
-  display: inline-block;
 }
 
-#countup #countdown {
-  display: inline-table;
+#countup {
+  display: block;
+  float: right;
+  position: relative;
+  bottom: 1em;
 }
 
+#countdown {
+  float: left;
+  position: relative;
+  bottom: 1em;
+}
 
 
 
