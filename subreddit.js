@@ -1,3 +1,4 @@
+
 $('#view').click(function(){
   $('#posts').slideToggle("slow", function(){
     $('#latest').click(function(){
@@ -6,24 +7,20 @@ $('#view').click(function(){
               if ( i < 20 ) return;
               $("#posts").append( '<div class="indv-post">' + '<ul>' + '<li>' + item.data.title + '</li>'
                 + item.data.url  + '</li>' + '<li>' + item.data.permalink + '</li>' + '</ul>' + 
-                '<button class="vote" id="up" type="button">' + 'Vote up!' + '</button>' + '<div class="counter" id="countup">' + '</div>' + '<button class="vote" id="down" type="button">' + 'Vote down!'  + '</button>' +
-                '<div class="counter" id="countdown">' + '</div>' +
+                '<div class="vote-up-div">' + '<button class="voteup" type="button">' + 'Vote up!' + '</button>' + '<div class="counter" id="countup">' + '</div>' + '</div>' + '<div class="vote-down-div"> '+ '<button class="vote" id="down" type="button">' + 'Vote down!'  + '</button>' +
+                '<div class="counter" id="countdown">' + '</div>' + '</div>' +
                 '</div>');
 
-              $("#up").click(function() {
-                  $('#countup').html(function(i, val) { return +val+1 });
+              $(".vote-up-div").on("click",function() {
+                  $('this').find('.counter').html(function(i, val) { return +val+1 });
               });
-              $("#down").click(function() {
-                  $('#countdown').html(function(i, val) { return +val+1 });
+              $(".vote-down-div").on("click",function() {
+                  $('this').find('.counter').html(function(i, val) { return +val+1 });
               });
-                  
             });
           });
         });
       });
-});
+  });
 
-// $('#up').click(function(){
-//   $('#countup').html(function(i, val) { return val*1+1 });
-// });
 

@@ -74,17 +74,17 @@ body {
   list-style: none;
 }
 
-.vote {
+.vote-up-div .vote-down-div {
   position: relative;
   bottom: 1.5em;
 }
 
-#up {
+.vote-up-div {
   display: block;
   float: right;
 }
 
-#down {
+.vote-down-div {
   display: block;
   float: left;
 }
