@@ -19,24 +19,11 @@ $( document ).ready(function() {
         });
       });
 
-  $('#voteup').click(function(){
+  $('#voteup').on("click", (function(){
     $(this).parent().children('.counter').html(function(i, val) { return +val+1 });
+  }));
+  
+  $('#voteup').on("click", (function(){
+    $(this).parent().children('.counter').html(function(i, val) { return +val+1 });
+  }));
 });
-  });
-        // $('#voteup').on("click", function() {
-        //   $('#countup').html(function(i, val) { return +val+1 });
-        //   });
-        //  $("#down").click(function() {
-        //   $('#countdown').html(function(i, val) { return +val+1 });
-        //    });
-      
-   // $(".vote-up-div").click(function() {
-   //  console.log("anything");
-   
-   // });
-   // $(".votedown").on("click",function() {
-   //     $('this').find('.counter').html("function(i, val) { return +val+1 }");
-   // });
-
- // });
-
