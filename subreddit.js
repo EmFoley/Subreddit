@@ -1,4 +1,4 @@
-// $(function () {
+$( document ).ready(function() {
   $('#view').click(function(){
     $('#posts').slideToggle("slow");
   });
@@ -11,7 +11,7 @@
             if ( i < 20 ) return;
             $("#posts").append( '<div class="indv-post" id="number'+ counter+'">' + '<ul>' + '<li>' + item.data.title + '</li>'
               + item.data.url  + '</li>' + '<li>' + item.data.permalink + '</li>' + '</ul>' + 
-              '<div class="vote-up-div">' + '<button id="voteup" type="button">' + 'Vote up!' + '</button>' + '<div class="counter" id="countup">' + '</div>' + '</div>' + '<div class="vote-down-div"> '+ '<button id="votedown" type="button">' + 'Vote down!'  + '</button>' +
+              '<div class="vote-up-div">' + '<button id="voteup" type="button">' + 'Vote up!' + '</button>' + '<div class="counter" id="voteup">' + '</div>' + '</div>' + '<div class="vote-down-div"> '+ '<button id="votedown" type="button">' + 'Vote down!'  + '</button>' +
               '<div class="counter" id="countdown">' + '</div>' + '</div>' +
               '</div>');
             counter++;
@@ -19,6 +19,10 @@
         });
       });
 
+  $('#voteup').click(function(){
+    $(this).parent().children('.counter').html(function(i, val) { return +val+1 });
+});
+  });
         // $('#voteup').on("click", function() {
         //   $('#countup').html(function(i, val) { return +val+1 });
         //   });
