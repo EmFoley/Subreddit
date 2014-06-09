@@ -22,24 +22,17 @@ $('#latest').click(function(){
     });
 
 
-$('.vote-up-div').on("click", "p", function(){
-  var clickNum = 0;
-  $(this).html(clickNum++);
+$(document).on("click", ".vote-up-div", function(){
+  $(this).find('.counter').html(function(i, val) { return +val+1 }
+    );
 });
 
-//   $('#voteup').on('click', (function(){
-//     var clickNum = 0;
-//     $(this).parent().children('.counter').html(clickNum ++);
-//   }));
-  
-//   $('#voteup').on('click', (function(){
-//     $(this).parent().children('.counter').html( clickNum ++ );
-//   }));
-// });
+$(document).on("click", ".vote-down-div", function(){
+  $(this).find('.counter').html(function(i, val) { return +val-1 }
+    );
+});
 
-// var reOrder = function() {
 
-// }
 
 $('#move-up').click(function(){
   $(this).parent('.indv-post').insertBefore($(this).parent('.indv-post').prev());
