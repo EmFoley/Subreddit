@@ -10,10 +10,11 @@ $('#latest').click(function(){
         var counter = 0;
         $.each(data.data.children, function(i, item){
           if ( i < 20 ) return;
-          $("#posts").append( '<div class="indv-post" id="number'+ counter+'">' + '<ul>' + '<li>' + item.data.title + '</li>'
-            + item.data.url  + '</li>' + '<li>' + item.data.permalink + '</li>' + '</ul>' + 
-            '<div class="vote-up-div">' + '<button id="voteup" type="button">' + 'Vote up!' + '</button>' + '<div class="counter" id="voteup">' + '<p></p>' + '</div>' + '</div>' + '<div class="vote-down-div"> '+ '<button id="votedown" type="button">' + 'Vote down!'  + '</button>' +
-            '<div class="counter" id="countdown">' + '</div>' + '</div>' +
+          $("#posts").append( '<div class="indv-post" id="number'+ counter+'">' + '<button id="move-up" type="button">' + 'Move Up' + '</button>' + '<button id="move-down" type="button">' + 'Move Down' + '</button>' +
+            '<ul>' + '<li>' + item.data.title + '</li>' + item.data.url  + '</li>' + '<li>' + item.data.permalink + '</li>' + '</ul>' + 
+                    '<div class="vote-up-div">' + '<button id="voteup" type="button">' + 'Vote up!' + '</button>' + '<div class="counter" id="voteup">' + '<p></p>' + '</div>' + 
+                  '</div>' + '<div class="vote-down-div"> '+ '<button id="votedown" type="button">' + 'Vote down!'  + '</button>' +
+              '<div class="counter" id="countdown">' + '</div>' + '</div>' +
             '</div>');
           counter++;
         });
@@ -39,3 +40,11 @@ $('.vote-up-div').on("click", "p", function(){
 // var reOrder = function() {
 
 // }
+
+$('#move-up').click(function(){
+  $(this).parents('.indv-post').insertBefore($(this).parents('.indv-post').prev());
+});
+
+$('#move-down').click(function(){
+  $(this).parents('.indv-post').insertAfter($(this).parents('.indv-post').next());
+});
