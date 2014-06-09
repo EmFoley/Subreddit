@@ -80,16 +80,21 @@ body {
 }
 
 .vote-up-div {
-  display: block;
   float: right;
+  position: relative;
+  bottom: 1em;
 }
 
 .vote-down-div {
-  display: block;
   float: left;
+  position: relative;
+  bottom: 1em;
 }
 
 #countup {
+  width: 30px;
+  height: 30px;
+  color: black;
   display: block;
   float: right;
   position: relative;
@@ -97,6 +102,8 @@ body {
 }
 
 #countdown {
+  width: 30px;
+  height: 30px;
   float: left;
   position: relative;
   bottom: 1em;
