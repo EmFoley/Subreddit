@@ -42,9 +42,9 @@ $('.vote-up-div').on("click", "p", function(){
 // }
 
 $('#move-up').click(function(){
-  $(this).parents('.indv-post').insertBefore($(this).parents('.indv-post').prev());
+  $(this).parent('.indv-post').insertBefore($(this).parent('.indv-post').prev());
 });
 
 $('#move-down').click(function(){
-  $(this).parents('.indv-post').insertAfter($(this).parents('.indv-post').next());
+  $(this).parent('.indv-post').insertAfter($(this).parent('.indv-post').next());
 });
