@@ -34,10 +34,10 @@ $(document).on("click", ".vote-down-div", function(){
 
 
 
-$('#move-up').click(function(){
+$(document).on("click", "#move-up", function(){
   $(this).parent('.indv-post').insertBefore($(this).parent('.indv-post').prev());
 });
 
-$('#move-down').click(function(){
+$(document).on("click", "#move-down", function(){
   $(this).parent('.indv-post').insertAfter($(this).parent('.indv-post').next());
 });
