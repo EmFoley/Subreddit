@@ -83,6 +83,7 @@ body {
   float: right;
   position: relative;
   bottom: 1em;
+  display: inline-block;
 }
 
 .vote-down-div {
