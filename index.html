@@ -5,6 +5,7 @@
   <title>Emily's Subreddit Reader</title>
   <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
   <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,700' rel='stylesheet' type='text/css'>
+  <script src="snoowrapper.rb"></script>
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
@@ -14,7 +15,11 @@
     <div class="view">
       <div class="button" id="view"><a href="#"><span class="button-txt">View that Tech Talk!</span></a></div>
       <div class="posts" id="posts">
-        <div class="button" id="latest"><a href="#"><span class="button-txt">Get Latest Posts</span></a></div>
+        <form id="login">
+          Username: <input type="text" name="username">
+          Password: <input type="text" name="password"> 
+          <input type="submit" id="login" value="Log In to Reddit">
+        </form>
       </div>
     </div>
   </div>
